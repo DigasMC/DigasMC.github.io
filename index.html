@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diogo Carlos</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/deedaebaf8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body { font-family: 'Quicksand', sans-serif; font-size: 25px; padding: 0 80px;  transition: all 0.5s ease;}
+    body.dark { color: #e2e2e2; background-color: #121212; }
+    .about { width: 60vw; }
+    a { color: inherit; text-decoration: none; font-weight: 600; box-shadow: 0 -2px  #bb85fc  inset; transition: box-shadow 0.5s ease;}
+    body.dark a { box-shadow: 0 -2px  #6100ee  inset; }
+    a:hover { box-shadow: 0 -10px  #bb85fc  inset; }
+    body.dark a:hover { box-shadow: 0 -10px #6100ee inset;  }
+    .toggle { position: absolute; top: 33.5px; right:80px; cursor: pointer; }
+
+    @media (max-width: 760px) {
+        body { padding: 0 40px; }
+        .toggle { right: 40px; }
+        .about { width: 100%; }
+    }
+</style>
+<body>  
+    <div class="about">
+        <h1>Hi.</h1>
+        <h2>My name is Diogo.</h2>
+        <p>I am a full-stack developer with a keen eye to solve complex problems.</p>
+        <p>I have a huge passion for entrepreneurship and everything about the startup environment.</p>
+        <p>Currently working with Vue.js and Groovy, but also have a background in Java and Web Design.</p>
+        <p>When not programming, I love to spend time playing football, watching Netflix, and playing guitar.</p>
+        <p>You can find me on <a href="https://www.linkedin.com/in/diogo-carlos/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://www.github.com/DigasMC" target="_blank"  rel="noopener noreferrer">GitHub</a>.</p>
+    </div>
+    <div class="toggle" onclick="toggleMode()">
+        <em id="toggle-icon" class="fas fa-moon"></em>
+    </div>
+</body>
+<script>
+    function toggleMode() {
+        document.getElementsByTagName("BODY")[0].classList.toggle("dark");
+        document.getElementById("toggle-icon").classList.toggle("fa-moon");
+        document.getElementById("toggle-icon").classList.toggle("fa-sun");
+    }
+</script>
+</html>
